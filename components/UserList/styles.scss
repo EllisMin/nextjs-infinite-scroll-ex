@@ -1,0 +1,14 @@
+.user {
+  padding: 1rem;
+}
+.user-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .user {
+    padding: 2rem;
+    margin: 1rem;
+    background: #ccc;
+  }
+}
