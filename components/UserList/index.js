@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Router, { useRouter } from 'next/router'
 import './styles.scss'
 const UserList = ({ userData }) => {
-  const [loading, setLoading] = useState(false)
   const [users, setUsers] = useState([])
   const router = useRouter()
   const [loading, setLoading] = useState(false)
