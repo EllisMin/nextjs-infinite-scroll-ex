@@ -1,5 +1,6 @@
 import fetch from 'node-fetch'
 import UserList from '../components/UserList'
+
 const HomePage = ({ userData }) => {
   return (
     <div className="home-page">
@@ -7,13 +8,14 @@ const HomePage = ({ userData }) => {
     </div>
   )
 }
+
 export const getServerSideProps = async ({ query }) => {
   // Fetch the first page as default
   const page = query.page || 1
   let userData = null
   // Fetch data from external API
   try {
-    const res = await fetch(`${process.env.FETCH_URL}/users?page=${page}`)
+    const res = await fetch(`${process.env.FETCH_URL}/api/users?page=${page}`)
     if (res.status !== 200) {
       throw new Error('Failed to fetch')
     }

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "faker": "^5.1.0",
     "next": "^10.0.0",
     "node-fetch": "^2.6.1",
     "node-sass": "^4.14.1",
