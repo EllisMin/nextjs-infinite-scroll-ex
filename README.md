@@ -1,1 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# Infinite scrolling example in Next.js
+
+[Blog post](https://ellismin.com/2020/05/next-infinite-scroll/)
