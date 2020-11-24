@@ -15,7 +15,16 @@ export const getServerSideProps = async ({ query }) => {
   let userData = null
   // Fetch data from external API
   try {
-    const res = await fetch(`${process.env.FETCH_URL}/api/users?page=${page}`)
+    const fetchOption = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        page,
+      }),
+    }
+    const res = await fetch(`${process.env.FETCH_URL}/api/users`, fetchOption)
     if (res.status !== 200) {
       throw new Error('Failed to fetch')
     }

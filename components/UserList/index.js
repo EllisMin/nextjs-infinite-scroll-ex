@@ -55,10 +55,14 @@ const UserList = ({ userData }) => {
           // Trigger fetch
           const query = router.query
           query.page = parseInt(userData.curPage) + 1
-          router.push({
-            pathname: router.pathname,
-            query: query,
-          })
+
+          router.push(
+            {
+              pathname: '/',
+              query: { page: query.page },
+            },
+            '/'
+          )
         }
       }
     }

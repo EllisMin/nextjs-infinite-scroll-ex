@@ -17,7 +17,7 @@ const getLimitedUsers = limit => {
 }
 
 export default function handler(req, res) {
-  const curPage = req.query.page || 1
+  const curPage = req.body.page || 1
   // Display 30 users per page load
   const perPage = 30
 
